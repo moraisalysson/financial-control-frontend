@@ -1,0 +1,62 @@
+<div class="card-form">
+  <mat-card appearance="outlined">
+    <div class="card-header bg-primary text-white">
+      <h4>Cadastro de Conta Bancária</h4>
+    </div>
+    <form [formGroup]="contaForm" (ngSubmit)="onSubmit()">
+      <mat-card-content>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Nome do Banco</mat-label>
+            <input
+              matInput
+              placeholder="Ex.: Banco Exemplo"
+              formControlName="nomeBanco"
+            />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <!-- <mat-hint>Hint</mat-hint> -->
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Agência</mat-label>
+            <input matInput placeholder="Ex.: 1234" formControlName="agencia" />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <!-- <mat-hint>Hint</mat-hint> -->
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Número da Conta</mat-label>
+            <input
+              matInput
+              placeholder="Ex.: 56789"
+              formControlName="numeroConta"
+            />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <!-- <mat-hint>Hint</mat-hint> -->
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Tipo de Conta</mat-label>
+            <mat-select formControlName="tipoConta">
+              <mat-option
+                *ngFor="let tipoConta of tiposContasOptions"
+                [value]="tipoConta.value"
+                >{{ tipoConta.description }}</mat-option
+              >
+            </mat-select>
+          </mat-form-field>
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button type="submit" [disabled]="contaForm.invalid">
+          Cadastrar
+        </button>
+        <button mat-button type="button" (click)="onReset()">Limpar</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>
