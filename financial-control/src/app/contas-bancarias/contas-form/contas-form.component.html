@@ -41,7 +41,7 @@
         <p>
           <mat-form-field appearance="outline">
             <mat-label>Tipo de Conta</mat-label>
-            <mat-select formControlName="tipoConta">
+            <mat-select formControlName="tipo">
               <mat-option
                 *ngFor="let tipoConta of tiposContasOptions"
                 [value]="tipoConta.value"
@@ -59,4 +59,8 @@
       </mat-card-actions>
     </form>
   </mat-card>
+</div>
+
+<div class="card-form">
+  <app-contas-list></app-contas-list>
 </div>

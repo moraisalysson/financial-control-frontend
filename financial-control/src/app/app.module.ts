@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContasBancariasModule } from './contas-bancarias/contas-bancarias.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -12,7 +13,8 @@ import { ContasBancariasModule } from './contas-bancarias/contas-bancarias.modul
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ContasBancariasModule
+    ContasBancariasModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
