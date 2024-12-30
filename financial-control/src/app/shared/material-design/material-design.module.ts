@@ -7,6 +7,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import {MatSortModule} from '@angular/material/sort';
+import { MatTableModule} from '@angular/material/table';
 
 @NgModule({
   exports: [
@@ -18,7 +21,10 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     MatButtonModule,
     MatSelectModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatProgressSpinnerModule,
+    MatSortModule,
+    MatTableModule
   ],
 })
 export class MaterialDesignModule {}

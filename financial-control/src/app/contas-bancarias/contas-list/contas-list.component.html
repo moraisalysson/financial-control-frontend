@@ -1,0 +1,22 @@
+<button (click)="listar()">Listar</button>
+<div *ngIf="resources$ | async as resources; else empty">
+  <table>
+    <thead>
+      <tr>
+        <th *ngFor="let column of columns">{{ column }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let resource of resources">
+        <td>{{ resource.nomeBanco }}</td>
+        <td>{{ resource.agencia }}</td>
+        <td>{{ resource.numeroConta }}</td>
+        <td>{{ resource.tipo }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #empty>
+  <p>Sem dados</p>
+</ng-template>
