@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ContaBancariaTO } from '../models/conta-bancaria-to.interface';
+import { ContaBancariaTO } from '../shared/models/conta-bancaria-to.interface';
 import { first, tap } from 'rxjs';
 
 @Injectable({

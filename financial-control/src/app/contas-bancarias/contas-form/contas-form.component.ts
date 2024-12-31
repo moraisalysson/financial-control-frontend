@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { TiposContasBancarias } from 'src/app/models/tipos-contas.interface';
+import { TiposContasBancarias } from 'src/app/shared/models/tipos-contas.interface';
 import { ContasServiceService } from '../contas-service.service';
-import { ContaBancariaTO } from 'src/app/models/conta-bancaria-to.interface';
+import { ContaBancariaTO } from 'src/app/shared/models/conta-bancaria-to.interface';
 import { Observable } from 'rxjs';
 
 @Component({
