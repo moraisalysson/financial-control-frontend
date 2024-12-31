@@ -7,12 +7,13 @@ import { NavbarComponent } from '../navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
+import { TransacoesFormComponent } from './home/transacoes-form/transacoes-form.component';
 
 
 
 @NgModule({
   declarations: [
-    HomeComponent, NavbarComponent, HeaderComponent, FooterComponent
+    HomeComponent, NavbarComponent, HeaderComponent, FooterComponent, TransacoesFormComponent
   ],
   imports: [
     CommonModule,
