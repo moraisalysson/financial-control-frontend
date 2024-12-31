@@ -1,5 +1,3 @@
-import { TiposContasBancarias } from './tipos-contas.interface';
-
 export interface ContaBancariaTO {
   id: number;
   nomeBanco: string;
@@ -8,4 +6,5 @@ export interface ContaBancariaTO {
   tipo: number;
   dataCriacao: Date;
   dataAtualizacao: Date;
+  saldosBancarios: any[];
 }

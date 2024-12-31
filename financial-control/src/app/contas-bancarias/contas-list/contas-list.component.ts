@@ -13,6 +13,7 @@ export class ContasListComponent {
   loading$: Observable<boolean> | null = null;
 
   constructor(private service: ContasServiceService) {
+    this.listar();
   }
 
   get columns() {

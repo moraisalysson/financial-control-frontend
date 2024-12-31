@@ -1,4 +1,3 @@
-<button (click)="listar()">Listar</button>
 <div *ngIf="resources$ | async as resources; else empty">
   <table>
     <thead>
@@ -12,6 +11,7 @@
         <td>{{ resource.agencia }}</td>
         <td>{{ resource.numeroConta }}</td>
         <td>{{ resource.tipo }}</td>
+        <td>{{ resource.saldosBancarios }}</td>
       </tr>
     </tbody>
   </table>

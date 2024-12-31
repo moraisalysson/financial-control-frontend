@@ -1,4 +1,4 @@
-export interface TiposContasBancarias {
+export interface ChaveValor {
   value: number;
   description: string;
 }

@@ -1,9 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { TiposContasBancarias } from 'src/app/shared/models/tipos-contas.interface';
+import { ChaveValor } from 'src/app/shared/models/chave-valor.interface';
 import { ContasServiceService } from '../contas-service.service';
-import { ContaBancariaTO } from 'src/app/shared/models/conta-bancaria-to.interface';
-import { Observable } from 'rxjs';
+import { TiposContasEnum } from 'src/app/shared/models/tipos-contas.enum';
 
 @Component({
   selector: 'app-contas-form',
@@ -14,10 +13,7 @@ import { Observable } from 'rxjs';
 export class ContasFormComponent {
   contaForm: FormGroup;
 
-  tiposContasOptions: TiposContasBancarias[] = [
-    {value: 0, description: 'Conta Corrente'},
-    {value: 1, description: 'Conta Poupança'},
-  ];
+  tiposContasOptions: ChaveValor[] = TiposContasEnum.values();
 
   constructor(private fb: FormBuilder, private service: ContasServiceService) {
     this.contaForm = this.fb.group({
