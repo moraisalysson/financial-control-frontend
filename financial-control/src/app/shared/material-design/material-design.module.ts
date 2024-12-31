@@ -10,6 +10,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {MatSortModule} from '@angular/material/sort';
 import { MatTableModule} from '@angular/material/table';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   exports: [
@@ -24,7 +27,10 @@ import { MatTableModule} from '@angular/material/table';
     FormsModule,
     MatProgressSpinnerModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,
+    MatMenuModule,
+    MatDividerModule,
+    MatSidenavModule
   ],
 })
 export class MaterialDesignModule {}
